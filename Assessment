@@ -1,0 +1,30 @@
+from tkinter import *
+
+form = Tk()
+form.title("Kilogram to Gram Converter")
+form.geometry('500x400')
+form.config(bg="lightblue")
+
+def convert_kg_to_gram():
+    kg = int(entry_kg.get())
+    gram = kg * 1000
+    label_value.config(text="gram")
+
+
+label_kg = Label(text="Enter Kilograms:",bg="yellow",fg="red")
+label_kg.grid(row=0,column=0, pady=2)
+
+entry_kg = Entry(form)
+entry_kg.grid(row=0,column=1,pady=2)
+
+label_result = Label(text="Result with Grams:",bg="yellow")
+label_result.grid(row=1,column=0, pady=2)
+
+label_value = Label(text="0")
+label_value.grid( row=1,column=1, pady=2)
+
+
+button_convert = Button(text="Convert", command)
+button_convert.grid( row=3,column=0, pady=2)
+
+form.mainloop()
